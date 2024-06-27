@@ -1,4 +1,4 @@
-module git.jopo.dev/zanehala/homelab/vault/init
+module git.jopo.dev/jopo/homelab/vault/init
 
 go 1.22
 

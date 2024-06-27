@@ -24,7 +24,7 @@ gitea:
       webhook:
         ALLOWED_HOST_LIST: "*.jopo.dev,*.slack.com"
       Time:
-        DEFAULT_UI_LOCATION: America/Chicago
+        DEFAULT_UI_LOCATION: Europe/Warsaw
       repository:
         ENABLE_PUSH_CREATE_USER: true
         upload:
