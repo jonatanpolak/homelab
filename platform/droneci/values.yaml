@@ -5,7 +5,7 @@ drone:
   env:
     DRONE_SERVER_HOST: drone.jopo.dev
     DRONE_SERVER_PROTO: https
-    DRONE_USER_CREATE: username:zhala,admin:true
+    DRONE_USER_CREATE: username:jopo,admin:true
 
   ingress:
     enabled: true

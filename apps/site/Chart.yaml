@@ -4,4 +4,4 @@ version: 0.0.0
 dependencies:
   - name: site
     version: 0.1.0
-    repository: https://git.jopo.dev/api/packages/zhala/helm
+    repository: https://git.jopo.dev/api/packages/jopo/helm

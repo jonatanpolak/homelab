@@ -25,9 +25,9 @@ RUN pacman --sync --refresh --noconfirm \
         ansible \
         diffutils \
         docker \
-        docker-compose \
         git \
         graphviz \
+        curl \
         helm \
         kubectl \
         kustomize \
@@ -45,6 +45,10 @@ RUN pacman --sync --refresh --noconfirm \
         python-rich \
         sudo \
         terraform
+
+RUN mkdir -p /usr/local/lib/docker/cli-plugins
+RUN curl -SL https://github.com/docker/compose/releases/download/v2.28.1/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+RUN chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
 # # TODO https://github.com/ansible-collections/community.docker/issues/216
 # RUN pip install docker-compose
