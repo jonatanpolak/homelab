@@ -3,7 +3,7 @@ drone:
     - droneci-secrets
 
   env:
-    DRONE_SERVER_HOST: drone.zanelab.com
+    DRONE_SERVER_HOST: drone.jopo.dev
     DRONE_SERVER_PROTO: https
     DRONE_USER_CREATE: username:zhala,admin:true
 
@@ -13,7 +13,7 @@ drone:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: &host drone.zanelab.com
+      - host: &host drone.jopo.dev
         paths:
           - path: /
             pathType: Prefix

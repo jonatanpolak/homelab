@@ -1,13 +1,25 @@
-FROM archlinux
+FROM local/archlinux:latest
+
+# RUN rm -rf /etc/pacman.d/gnupg
+# RUN pacman-key --init
+# RUN echo "allow-weak-key-signatures" >> /etc/pacman.d/gnupg/gpg.conf
+# RUN pacman-key --populate 
+
+# RUN pacman -Sy --noconfirm archlinux-keyring
+# RUN pacman-key --populate
+# # RUN pacman-key --refresh-keys
+# # RUN pacman -Syyu --noconfirm
+# RUN pacman-db-upgrade
+# RUN update-ca-trust
 
 # Sort mirrors by speed
-RUN pacman --sync --refresh --noconfirm \
-        reflector \
-    && reflector \
-        --save /etc/pacman.d/mirrorlist \
-        --protocol https \
-        --latest 20 \
-        --sort rate
+# RUN pacman --sync --refresh --noconfirm \
+#         reflector \
+#     && reflector \
+#         --save /etc/pacman.d/mirrorlist \
+#         --protocol https \
+#         --latest 20 \
+#         --sort rate
 
 RUN pacman --sync --refresh --noconfirm \
         ansible \
@@ -34,5 +46,5 @@ RUN pacman --sync --refresh --noconfirm \
         sudo \
         terraform
 
-# TODO https://github.com/ansible-collections/community.docker/issues/216
-RUN pip install docker-compose
+# # TODO https://github.com/ansible-collections/community.docker/issues/216
+# RUN pip install docker-compose
